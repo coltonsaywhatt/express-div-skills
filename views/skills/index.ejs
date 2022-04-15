@@ -1,24 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel='stylesheet' href='/stylesheets/style.css' />
-  <title>Document</title>
-</head>
-<body>
-  <h1>My Dev Skills</h1>
+<%- include('../partials/header') %>
+
+  <h1>Skills</h1>
   <ul>
     <% skills.forEach(function(s) { %>
       <li>
-        <a href="/skills/<%= s.id %>"><%= s.skill %></a>
-          - 
-        <%= s.comfy ? 'comfortable' : 'not comfortable' %>
+        <form action="/skills/<%= s.id %>?_method=DELETE"
+          class="delete-form"
+          method="POST"
+          >
+          <button type="submit">X</button>
+        </form>
+         <a href="/skills/<%= s.id %>"><%= s.skill %></a>
+        - 
+        <%= s.quality ? 'Good' : 'Not so good' %>
       </li>
     <% }); %>
   </ul>
-  <a href="/">HOME</a>
-  <a href="/skills/new">Add Skill</a>
-</body>
-</html>
+  <a href="/skills/new">Add a new skill</button>
+
+  <%- include('../partials/footer') %>
