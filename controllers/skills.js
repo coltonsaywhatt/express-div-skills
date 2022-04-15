@@ -1,5 +1,4 @@
 const Skill = require('../models/skill');
-const { render } = require('../server');
 
 module.exports = {
   index,
