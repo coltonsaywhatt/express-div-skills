@@ -1,6 +1,16 @@
+* {
+	box-sizing: border-box;
+}
+
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+	background-image: linear-gradient(to right top, #845EC2, #009EFA, #00D2FC, #4FFBDF);
+	font-family: Montserrat, sans-serif;	
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	min-height: 100vh;
+	margin: 0;
 }
 
 a {
@@ -13,9 +23,25 @@ a {
 }
 	
 .delete-form button {
-  color: red;
+  color: white;
+  background-color: red;
+  border-radius: 30%;
 }
 	
 li {
   list-style: none;
+}
+
+.box-container {
+	background-color: #231E39;
+	border-radius: 25px;
+	box-shadow: 10px 10px 15px rgba(0,0,0,0.35);
+	color: #B3B8CD;
+	padding: 30px 0 0;
+	position: relative;
+	width: 350px;
+	max-width: 100%;
+	text-align: center;
+	margin: 20px 0;
+	overflow: hidden;
 }
